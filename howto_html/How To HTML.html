@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How-To HTML</title>
+
+    <style>
+        #hide {
+            display: none;
+            font-size: 40px;
+            color: blue;
+            background: black;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 <h1>Pre-Order Info:</h1>
@@ -12,21 +22,35 @@
 </p>
 <h1>How-To HTML : Book/PDF | Credit to Axel Riggs</h1>
 <button onclick="howtohtml()">Order</button>
+<!-- <a id="hide" href="https://files.axelriggsgamer.now.sh">press me</a> -->
+<a id="hide" href="mailto:axelriggsgamer@gmail.com?subject=Pre-Order%2FOrder&body=I%20would%20like%20to%20order%2Fpreorder%20How-To%20HTML.">press me</a>
 <script>
     function howtohtml() {
-      confirm("Are you sure you want to order How-To HTML?");}
-      var howtohtmlorder;
-var r = confirm("Are you sure you want to order How-To HTML?");
-if (r == true) {
-  howtohtmlorder = "Ordering...";
-  document.open();
-  document.write("<a href="mailto:axelriggsgamer@gmail.com?subject=Pre-Order%2FOrder&body=I%20would%20like%20to%20order%2Fpreorder%20How-To%20HTML.">Press to TRULY confirm.</a>");
-  document.close();
-} else {
-  howtohtmlorder = "Order Canceled.";
-  window.alert(howtohtmlorder)
-}</script>
+    var howtohtmlorder;
 
+    var r = confirm("Are you sure you want to order How-To HTML?");
+
+    if (r === true) {
+        var link = window.document.getElementById('hide');
+        link.style.display = "block";
+
+        console.log(r)
+        howtohtmlorder = "ok";
+        // window.document.open();
+        // window.document.write('<a href=",https://files.axelriggsgamer.now.sh,>press me</a>');
+        // window.document.close();
+    } else {
+        console.log(r)
+        howtohtmlorder = "Order Canceled.";
+        window.alert(howtohtmlorder)
+    }
+}
+
+// Axel, fix this script.
+
+</script>
+
+<!-- af -->
     
 </body>
 </html>
