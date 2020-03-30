@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>null</title>
+    <title>JS link button</title>
 </head>
 <body>
-<script src="test.js"></script>
+    <button onclick="howtohtml()">Order</button>
+    <!-- <a id="hide" href="https://files.axelriggsgamer.now.sh">press me</a> -->
+    <a id="hide" href="mailto:axelriggsgamer@gmail.com?subject=Pre-Order%2FOrder&body=I%20would%20like%20to%20order%2Fpreorder%20How-To%20HTML.">press me</a>
+    <script>
+        function howtohtml() {
+        var howtohtmlorder;
+    
+        var r = confirm("Are you sure you want to order How-To HTML?");
+    
+        if (r === true) {
+            var link = window.document.getElementById('hide');
+            link.style.display = "block";
+    
+            console.log(r)
+            howtohtmlorder = "ok";
+            // window.document.open();
+            // window.document.write('<a href=",https://files.axelriggsgamer.now.sh,>press me</a>');
+            // window.document.close();
+        } else {
+            console.log(r)
+            howtohtmlorder = "Order Canceled.";
+            window.alert(howtohtmlorder)
+        }
+    }
+    
+    // You can ONLY change the LINK. (in the "hide" element button)
+    
+    </script>
 </body>
 </html>
