@@ -10,9 +10,23 @@
 <p>Our preorder system is; 1. You tell us what to preorder. 2. You wait until the thing is released. 3. We reserve one for you.
     Item below.
 </p>
-<h1>How-To HTML : Book/PDF | Note: Pictures are of the prototype. | Credit to Axel Riggs</h1>
-<img src="howto_html\IMG_0441.png" alt="Front">
-<img src="howto_html\IMG_0442.png" alt="Back">
+<h1>How-To HTML : Book/PDF | Credit to Axel Riggs</h1>
+<button onclick="howtohtml()">Order</button>
+<script>
+    function howtohtml() {
+      confirm("Are you sure you want to order How-To HTML?");}
+      var howtohtmlorder;
+var r = confirm("Are you sure you want to order How-To HTML?");
+if (r == true) {
+  howtohtmlorder = "Ordering...";
+  document.open();
+  document.write("<a href="mailto:axelriggsgamer@gmail.com?subject=Pre-Order%2FOrder&body=I%20would%20like%20to%20order%2Fpreorder%20How-To%20HTML.">Press to TRULY confirm.</a>");
+  document.close();
+} else {
+  howtohtmlorder = "Order Canceled.";
+  window.alert(howtohtmlorder)
+}</script>
+
     
 </body>
 </html>
